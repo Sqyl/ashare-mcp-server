@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ashare-mcp-server"
+version = "0.1.0"
+description = "A-share stock screener as an MCP Server — 3 tools: funnel screening / latest results / realtime quote"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sqyl" }]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "requests>=2.28",
+]
+keywords = ["mcp", "a-share", "stock", "screener", "llm", "agent"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.scripts]
+ashare-mcp = "ashare_mcp.server:main"
+
+[tool.setuptools.packages.find]
+include = ["ashare_mcp*"]

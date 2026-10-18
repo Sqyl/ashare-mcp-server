@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ashare-screener": {
+      "command": "ashare-mcp",
+      "env": { "TUSHARE_TOKEN": "your-token-here" }
+    }
+  }
+}
